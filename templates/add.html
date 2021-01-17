@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Add Cupcake</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Add Cupcake</h1>
+        <form id="new-cupcake-form">
+            <div class="mb-3">
+                <label for="form-flavor" class="form-label">Cupcake Flavor*</label>
+                <input type="text" class="form-control" id="form-flavor" placeholder="i.e. vanilla, chocolate, etc...">
+            </div>
+            <div class="mb-3">
+                <label for="form-size" class="form-label">Size*</label>
+                <input type="text" class="form-control" id="form-size" placeholder="i.e. large, small, etc...">
+            </div>
+            <div class="mb-3">
+                <label for="form-rating" class="form-label">Rating*</label>
+                <input type="number" class="form-control" id="form-rating" placeholder="enter a number">
+            </div>
+            <div class="mb-3">
+                <label for="form-image" class="form-label">Image</label>
+                <input type="url" class="form-control" id="form-image" placeholder="enter a URL">
+            </div>
+            <input class="btn btn-success" type="submit" value="Submit">
+        </form>
+
+        <a href="/">Cupcake List</a>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0-0/axios.min.js"></script>
+    <script src="/static/muffin.js"></script>
+</body>
+
+</html>

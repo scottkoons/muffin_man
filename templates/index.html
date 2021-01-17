@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Muffin Man</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Cupcakes</h1>
+
+
+
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Flavor</th>
+                    <th scope="col">Size</th>
+                    <th scope="col">Rating</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for cupcake in cupcakes %}
+                <tr>
+                    <th scope="row">{{cupcake.id}}</th>
+                    <td><a href="/api/cupcakes/{{cupcake.id}}">{{cupcake.flavor}}</a></td>
+                    <td>{{cupcake.size}}</td>
+                    <td>{{cupcake.rating}}</td>
+                    <td><img src="{{cupcake.image}}" class="img-thumbnail" width="200"></td>
+                    <td><button type="button" class="btn btn-danger delete-cupcake"
+                            data-id="{{cupcake.id}}">Delete</button></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="/add">Add a cupcake</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0-0/axios.min.js"></script>
+    <script src="/static/muffin.js"></script>
+</body>
+
+</html>
